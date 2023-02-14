@@ -20,11 +20,14 @@ less time-consuming. On top of that, it would be fun and useful to implement add
 summary or comments.
 
 ## User story:
-- As a user, I would want to be able to set a pixel to a specific colour
-- As a user, I would want to be able to delete the colour for a certain pixel
-- As a user, I would want to see the date and month associated with each pixel
+Phase 1:
+- As a user, I would want to be able to create a mood board of any size I choose
+- As a user, I would want to be able to choose a starting date
+- As a user, I would want to see the date and month associated with each day
 - As a user, I would want to have a selection of moods to choose from
 - As a user, I would want to see a summary of the number of days I've felt each mood
+- As a user, I would want to assign a mood to a specific day
+- As a user, I would want to be able to change the mood of a specific day
 
 
 
