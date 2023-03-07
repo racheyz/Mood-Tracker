@@ -34,5 +34,8 @@ Phase 2:
 - As a user, at the start of the application, I want to be able to load my mood tracker from file (if I so choose)
 
 
+##Citations:
+Code in persistence class package and persistence test package is modified from
+https://github.students.cs.ubc.ca/CPSC210/JsonSerializationDemo.git 
 
  

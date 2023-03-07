@@ -70,7 +70,7 @@ public class Board {
         int dayOfLastPixelInBoard = this.getPixels().get(originalBoardSize - 1).getDay();
 
         if ((dayOfLastPixelInBoard == 31 && MONTHS_WITH31DAYS.contains(monthOfLastPixelInBoard))
-                || (dayOfLastPixelInBoard == 31 && MONTHS_WITH30DAYS.contains(monthOfLastPixelInBoard))
+                || (dayOfLastPixelInBoard == 30 && MONTHS_WITH30DAYS.contains(monthOfLastPixelInBoard))
                 || (dayOfLastPixelInBoard == 28 && monthOfLastPixelInBoard == 2)) {
             newStartDay = 1;
             newStartMonth = monthOfLastPixelInBoard + 1;

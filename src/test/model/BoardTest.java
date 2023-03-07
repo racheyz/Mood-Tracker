@@ -121,14 +121,14 @@ class BoardTest {
 
     @Test
     public void testAddDayToBoardDecToJan() {
-        testBoard.createBoard(15, 12, 1);
+        testBoard.createBoard(31, 12, 1);
         int sizeBefore = testBoard.getSize();
         testBoard.addDayToBoard(30);
         assertEquals(sizeBefore + 30, testBoard.getSize());
-        assertEquals(12, testBoard.getPixels().get(15).getMonth());
-        assertEquals(16, testBoard.getPixels().get(15).getDay());
-        assertEquals(1, testBoard.getPixels().get(44).getMonth());
-        assertEquals(14, testBoard.getPixels().get(44).getDay());
+        assertEquals(1, testBoard.getPixels().get(31).getMonth());
+        assertEquals(1, testBoard.getPixels().get(31).getDay());
+        assertEquals(1, testBoard.getPixels().get(60).getMonth());
+        assertEquals(30, testBoard.getPixels().get(60).getDay());
     }
 
 
