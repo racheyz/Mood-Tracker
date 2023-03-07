@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // A list of moods
-public class MoodList {
+public class MoodListDisplay {
 
     private static final Color ANGRY_RED = new Color(255,0,0);
     private static final Color ANXIOUS_ORANGE = new Color(255,153,51);
@@ -23,7 +23,7 @@ public class MoodList {
     private List<Mood> moodList;
 
     // EFFECTS: make an empty mood list and calls the method that makes a standard mood list
-    public MoodList() {
+    public MoodListDisplay() {
         moodList = new ArrayList<>();
         standardMoodList();
     }

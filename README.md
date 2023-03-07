@@ -29,6 +29,10 @@ Phase 1:
 - As a user, I would want to assign a mood to a specific day
 - As a user, I would want to be able to change the mood of a specific day
 
+Phase 2:
+- As a user, I want to be able to save my mood tracker at any point (if I so choose)
+- As a user, at the start of the application, I want to be able to load my mood tracker from file (if I so choose)
+
 
 
  

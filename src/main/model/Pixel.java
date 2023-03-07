@@ -1,5 +1,7 @@
 package model;
 
+import org.json.JSONObject;
+
 // Represents a pixel on the board with a corresponding month, day, and mood
 public class Pixel {
 
@@ -12,6 +14,14 @@ public class Pixel {
         this.month = m;
         this.day = d;
         this.mood = mood;
+    }
+
+    public JSONObject toJson() {
+        JSONObject json = new JSONObject();
+        json.put("month", month);
+        json.put("day", day);
+        json.put("mood", mood.toJson());
+        return json;
     }
 
     // MODIFIES: this

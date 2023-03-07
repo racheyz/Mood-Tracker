@@ -2,7 +2,7 @@ package model;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ui.MoodList;
+import ui.MoodListDisplay;
 
 import java.awt.*;
 
@@ -72,6 +72,67 @@ class BoardTest {
     }
 
     @Test
+    public void testAddDayToBoardToMidofMonth() {
+        testBoard.createBoard(15, 1, 1);
+        int sizeBefore = testBoard.getSize();
+        testBoard.addDayToBoard(10);
+        assertEquals(sizeBefore + 10, testBoard.getSize());
+        assertEquals(1, testBoard.getPixels().get(15).getMonth());
+        assertEquals(16, testBoard.getPixels().get(15).getDay());
+        assertEquals(1, testBoard.getPixels().get(24).getMonth());
+        assertEquals(25, testBoard.getPixels().get(24).getDay());
+    }
+
+    @Test
+    public void testAddDayToBoardToEndOf31Month() {
+        testBoard.createBoard(31, 1, 1);
+        int sizeBefore = testBoard.getSize();
+        testBoard.addDayToBoard(10);
+        assertEquals(sizeBefore + 10, testBoard.getSize());
+        assertEquals(2, testBoard.getPixels().get(31).getMonth());
+        assertEquals(1, testBoard.getPixels().get(31).getDay());
+        assertEquals(2, testBoard.getPixels().get(40).getMonth());
+        assertEquals(10, testBoard.getPixels().get(40).getDay());
+    }
+
+    @Test
+    public void testAddDayToBoardToEndOf30Month() {
+        testBoard.createBoard(30, 4, 1);
+        int sizeBefore = testBoard.getSize();
+        testBoard.addDayToBoard(10);
+        assertEquals(sizeBefore + 10, testBoard.getSize());
+        assertEquals(5, testBoard.getPixels().get(30).getMonth());
+        assertEquals(1, testBoard.getPixels().get(30).getDay());
+        assertEquals(5, testBoard.getPixels().get(39).getMonth());
+        assertEquals(10, testBoard.getPixels().get(39).getDay());
+    }
+
+    @Test
+    public void testAddDayToBoardToEndOf28Month() {
+        testBoard.createBoard(28, 2, 1);
+        int sizeBefore = testBoard.getSize();
+        testBoard.addDayToBoard(10);
+        assertEquals(sizeBefore + 10, testBoard.getSize());
+        assertEquals(3, testBoard.getPixels().get(28).getMonth());
+        assertEquals(1, testBoard.getPixels().get(28).getDay());
+        assertEquals(3, testBoard.getPixels().get(37).getMonth());
+        assertEquals(10, testBoard.getPixels().get(37).getDay());
+    }
+
+    @Test
+    public void testAddDayToBoardDecToJan() {
+        testBoard.createBoard(15, 12, 1);
+        int sizeBefore = testBoard.getSize();
+        testBoard.addDayToBoard(30);
+        assertEquals(sizeBefore + 30, testBoard.getSize());
+        assertEquals(12, testBoard.getPixels().get(15).getMonth());
+        assertEquals(16, testBoard.getPixels().get(15).getDay());
+        assertEquals(1, testBoard.getPixels().get(44).getMonth());
+        assertEquals(14, testBoard.getPixels().get(44).getDay());
+    }
+
+
+    @Test
     public void testRecordMoodOnce() {
         testBoard.createBoard(31, 1, 1);
         testBoard.recordMood(1,0);
@@ -90,7 +151,7 @@ class BoardTest {
     public void testCountMoodOccurences() {
         testBoard.createBoard(31, 1, 1);
         testBoard.recordMood(1,0);
-        MoodList ml = new MoodList();
+        MoodListDisplay ml = new MoodListDisplay();
         assertEquals(0, testBoard.countMoodOccurences(ml.getMoodList().get(2)));
         assertEquals(1, testBoard.countMoodOccurences(ml.getMoodList().get(0)));
     }
