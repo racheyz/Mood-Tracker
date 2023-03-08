@@ -69,13 +69,9 @@ public class Board {
         int monthOfLastPixelInBoard = this.getPixels().get(originalBoardSize - 1).getMonth();
         int dayOfLastPixelInBoard = this.getPixels().get(originalBoardSize - 1).getDay();
 
-        if (dayOfLastPixelInBoard == 31 && MONTHS_WITH31DAYS.contains(monthOfLastPixelInBoard)) {
-            newStartDay = 1;
-            newStartMonth = monthOfLastPixelInBoard + 1;
-        } else if (dayOfLastPixelInBoard == 30 && MONTHS_WITH30DAYS.contains(monthOfLastPixelInBoard)) {
-            newStartDay = 1;
-            newStartMonth = monthOfLastPixelInBoard + 1;
-        } else if (dayOfLastPixelInBoard == 28 && monthOfLastPixelInBoard == 2) {
+        if ((dayOfLastPixelInBoard == 31)
+                || (dayOfLastPixelInBoard == 30 && MONTHS_WITH30DAYS.contains(monthOfLastPixelInBoard))
+                || (dayOfLastPixelInBoard == 28 && monthOfLastPixelInBoard == 2)) {
             newStartDay = 1;
             newStartMonth = monthOfLastPixelInBoard + 1;
         } else {
@@ -121,6 +117,7 @@ public class Board {
         return pixels;
     }
 
+    //
     public JSONObject toJson() {
         JSONObject json = new JSONObject();
         json.put("mood board", pixelsToJson());

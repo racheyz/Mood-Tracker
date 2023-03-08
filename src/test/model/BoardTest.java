@@ -95,6 +95,7 @@ class BoardTest {
         assertEquals(10, testBoard.getPixels().get(40).getDay());
     }
 
+
     @Test
     public void testAddDayToBoardToEndOf30Month() {
         testBoard.createBoard(30, 4, 1);
@@ -105,6 +106,30 @@ class BoardTest {
         assertEquals(1, testBoard.getPixels().get(30).getDay());
         assertEquals(5, testBoard.getPixels().get(39).getMonth());
         assertEquals(10, testBoard.getPixels().get(39).getDay());
+    }
+
+    @Test
+    public void testAddDayToBoardTo30MonthNot30Day() {
+        testBoard.createBoard(28, 4, 1);
+        int sizeBefore = testBoard.getSize();
+        testBoard.addDayToBoard(10);
+        assertEquals(sizeBefore + 10, testBoard.getSize());
+        assertEquals(4, testBoard.getPixels().get(27).getMonth());
+        assertEquals(28, testBoard.getPixels().get(27).getDay());
+        assertEquals(5, testBoard.getPixels().get(37).getMonth());
+        assertEquals(8, testBoard.getPixels().get(37).getDay());
+    }
+
+    @Test
+    public void testAddDayToBoard30DayNot30Month() {
+        testBoard.createBoard(30, 3, 1);
+        int sizeBefore = testBoard.getSize();
+        testBoard.addDayToBoard(10);
+        assertEquals(sizeBefore + 10, testBoard.getSize());
+        assertEquals(3, testBoard.getPixels().get(29).getMonth());
+        assertEquals(30, testBoard.getPixels().get(29).getDay());
+        assertEquals(3, testBoard.getPixels().get(30).getMonth());
+        assertEquals(31, testBoard.getPixels().get(30).getDay());
     }
 
     @Test
@@ -120,6 +145,30 @@ class BoardTest {
     }
 
     @Test
+    public void testAddDayToBoard28DaysNotFeb() {
+        testBoard.createBoard(28, 3, 1);
+        int sizeBefore = testBoard.getSize();
+        testBoard.addDayToBoard(10);
+        assertEquals(sizeBefore + 10, testBoard.getSize());
+        assertEquals(3, testBoard.getPixels().get(28).getMonth());
+        assertEquals(29, testBoard.getPixels().get(28).getDay());
+        assertEquals(4, testBoard.getPixels().get(37).getMonth());
+        assertEquals(7, testBoard.getPixels().get(37).getDay());
+    }
+
+    @Test
+    public void testAddDayToBoardNot28DaysFeb() {
+        testBoard.createBoard(10, 2, 1);
+        int sizeBefore = testBoard.getSize();
+        testBoard.addDayToBoard(10);
+        assertEquals(sizeBefore + 10, testBoard.getSize());
+        assertEquals(2, testBoard.getPixels().get(10).getMonth());
+        assertEquals(11, testBoard.getPixels().get(10).getDay());
+        assertEquals(2, testBoard.getPixels().get(19).getMonth());
+        assertEquals(20, testBoard.getPixels().get(19).getDay());
+    }
+
+    @Test
     public void testAddDayToBoardDecToJan() {
         testBoard.createBoard(31, 12, 1);
         int sizeBefore = testBoard.getSize();
@@ -130,7 +179,6 @@ class BoardTest {
         assertEquals(1, testBoard.getPixels().get(60).getMonth());
         assertEquals(30, testBoard.getPixels().get(60).getDay());
     }
-
 
     @Test
     public void testRecordMoodOnce() {
