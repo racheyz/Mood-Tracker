@@ -3,7 +3,7 @@ package model;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
-import ui.MoodListDisplay;
+import ui.console.MoodListDisplay;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -32,7 +32,7 @@ public class Board {
     //          First pixel begins with the starting month and day.
     public void createBoard(int size, int startM, int startD) {
         int daysLeftInMonth;
-        Mood emptymood = new Mood(Color.BLACK, " ");
+        Mood emptymood = new Mood(Color.WHITE, " ");
 
         while (size > 0) {
             if (MONTHS_WITH31DAYS.contains(startM)) {

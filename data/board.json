@@ -2,7 +2,7 @@
     {
         "month": 1,
         "mood": {
-            "colour": -16777216,
+            "colour": -1,
             "emotion": " "
         },
         "day": 1
@@ -10,7 +10,7 @@
     {
         "month": 1,
         "mood": {
-            "colour": -16777216,
+            "colour": -1,
             "emotion": " "
         },
         "day": 2
@@ -18,7 +18,7 @@
     {
         "month": 1,
         "mood": {
-            "colour": -16777216,
+            "colour": -1,
             "emotion": " "
         },
         "day": 3
@@ -26,7 +26,7 @@
     {
         "month": 1,
         "mood": {
-            "colour": -16777216,
+            "colour": -1,
             "emotion": " "
         },
         "day": 4
@@ -34,7 +34,7 @@
     {
         "month": 1,
         "mood": {
-            "colour": -16777216,
+            "colour": -1,
             "emotion": " "
         },
         "day": 5
@@ -42,7 +42,7 @@
     {
         "month": 1,
         "mood": {
-            "colour": -16777216,
+            "colour": -1,
             "emotion": " "
         },
         "day": 6
@@ -50,23 +50,23 @@
     {
         "month": 1,
         "mood": {
-            "colour": -16777216,
-            "emotion": " "
+            "colour": -154,
+            "emotion": "sick"
         },
         "day": 7
     },
     {
         "month": 1,
         "mood": {
-            "colour": -16777216,
-            "emotion": " "
+            "colour": -26317,
+            "emotion": "anxious"
         },
         "day": 8
     },
     {
         "month": 1,
         "mood": {
-            "colour": -16777216,
+            "colour": -1,
             "emotion": " "
         },
         "day": 9
@@ -74,15 +74,15 @@
     {
         "month": 1,
         "mood": {
-            "colour": -16777216,
-            "emotion": " "
+            "colour": -6710785,
+            "emotion": "tired"
         },
         "day": 10
     },
     {
         "month": 1,
         "mood": {
-            "colour": -16777216,
+            "colour": -1,
             "emotion": " "
         },
         "day": 11
@@ -90,7 +90,7 @@
     {
         "month": 1,
         "mood": {
-            "colour": -16777216,
+            "colour": -1,
             "emotion": " "
         },
         "day": 12
@@ -98,7 +98,7 @@
     {
         "month": 1,
         "mood": {
-            "colour": -16777216,
+            "colour": -1,
             "emotion": " "
         },
         "day": 13
@@ -106,15 +106,15 @@
     {
         "month": 1,
         "mood": {
-            "colour": -16777216,
-            "emotion": " "
+            "colour": -7085837,
+            "emotion": "calm"
         },
         "day": 14
     },
     {
         "month": 1,
         "mood": {
-            "colour": -16777216,
+            "colour": -1,
             "emotion": " "
         },
         "day": 15
@@ -122,7 +122,7 @@
     {
         "month": 1,
         "mood": {
-            "colour": -16777216,
+            "colour": -1,
             "emotion": " "
         },
         "day": 16
@@ -130,7 +130,7 @@
     {
         "month": 1,
         "mood": {
-            "colour": -16777216,
+            "colour": -1,
             "emotion": " "
         },
         "day": 17
@@ -138,7 +138,7 @@
     {
         "month": 1,
         "mood": {
-            "colour": -16777216,
+            "colour": -1,
             "emotion": " "
         },
         "day": 18
@@ -146,7 +146,7 @@
     {
         "month": 1,
         "mood": {
-            "colour": -16777216,
+            "colour": -1,
             "emotion": " "
         },
         "day": 19
@@ -154,97 +154,9 @@
     {
         "month": 1,
         "mood": {
-            "colour": -16777216,
-            "emotion": " "
+            "colour": -154,
+            "emotion": "sick"
         },
         "day": 20
-    },
-    {
-        "month": 1,
-        "mood": {
-            "colour": -16777216,
-            "emotion": " "
-        },
-        "day": 21
-    },
-    {
-        "month": 1,
-        "mood": {
-            "colour": -16777216,
-            "emotion": " "
-        },
-        "day": 22
-    },
-    {
-        "month": 1,
-        "mood": {
-            "colour": -16777216,
-            "emotion": " "
-        },
-        "day": 23
-    },
-    {
-        "month": 1,
-        "mood": {
-            "colour": -16777216,
-            "emotion": " "
-        },
-        "day": 24
-    },
-    {
-        "month": 1,
-        "mood": {
-            "colour": -16777216,
-            "emotion": " "
-        },
-        "day": 25
-    },
-    {
-        "month": 1,
-        "mood": {
-            "colour": -16777216,
-            "emotion": " "
-        },
-        "day": 26
-    },
-    {
-        "month": 1,
-        "mood": {
-            "colour": -16777216,
-            "emotion": " "
-        },
-        "day": 27
-    },
-    {
-        "month": 1,
-        "mood": {
-            "colour": -16777216,
-            "emotion": " "
-        },
-        "day": 28
-    },
-    {
-        "month": 1,
-        "mood": {
-            "colour": -16777216,
-            "emotion": " "
-        },
-        "day": 29
-    },
-    {
-        "month": 1,
-        "mood": {
-            "colour": -16777216,
-            "emotion": " "
-        },
-        "day": 30
-    },
-    {
-        "month": 1,
-        "mood": {
-            "colour": -65536,
-            "emotion": "angry"
-        },
-        "day": 31
     }
 ]}

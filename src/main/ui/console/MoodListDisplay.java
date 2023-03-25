@@ -1,4 +1,4 @@
-package ui;
+package ui.console;
 
 import model.Mood;
 
@@ -58,6 +58,17 @@ public class MoodListDisplay {
             System.out.println(count + " -> " + m.getEmotion());
             count++;
         }
+    }
+
+    // REQUIRES: the emotion must be in the standardMoodList
+    // EFFECTS: returns the mood associated with the emotion
+    public Mood getMoodFromString(String emotion) {
+        for (Mood m: moodList) {
+            if (m.getEmotion().equals(emotion)) {
+                return m;
+            }
+        }
+        return null;
     }
 
     // getters

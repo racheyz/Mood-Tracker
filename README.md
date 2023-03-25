@@ -38,4 +38,21 @@ Phase 2:
 Code in persistence class package and persistence test package is modified from
 https://github.students.cs.ubc.ca/CPSC210/JsonSerializationDemo.git 
 
+Phase 3:
+Instructions for Grader:
+
+- You can generate the first required action of adding days to the mood board by clicking the button 
+ labeled "Add Day"
+- You can generate the second required action of changing the mood of a particular day by clicking on a
+  pixel, and selecting the mood of your choice
+- You can locate my visual component by clicking on the button labeled "Generate Pie Chart" which will display 
+  a pie chart representation of the current mood summary
+- You can save the state of my application by clicking the button labeled "Save Tracker"
+- You can reload the state of my application by clicking the button labeled "Load Mood Tracker From File" on the
+  start page
+
+##Citations:
+Code for creating a mood chart is inspired and modified from 
+http://www.java2s.com/Tutorial/Java/0261__2D-Graphics/DrawingaPieChart.htm
+
  

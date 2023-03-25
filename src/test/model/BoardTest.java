@@ -2,7 +2,7 @@ package model;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ui.MoodListDisplay;
+import ui.console.MoodListDisplay;
 
 import java.awt.*;
 
@@ -32,7 +32,7 @@ class BoardTest {
         assertEquals(1, testBoard.getPixels().get(30).getMonth());
         assertEquals(31, testBoard.getPixels().get(30).getDay());
         assertEquals(" ", testBoard.getPixels().get(10).getMood().getEmotion());
-        assertEquals(Color.BLACK, testBoard.getPixels().get(10).getMood().getColour());
+        assertEquals(Color.WHITE, testBoard.getPixels().get(10).getMood().getColour());
     }
 
     @Test
@@ -44,7 +44,7 @@ class BoardTest {
         assertEquals(2, testBoard.getPixels().get(27).getMonth());
         assertEquals(28, testBoard.getPixels().get(27).getDay());
         assertEquals(" ", testBoard.getPixels().get(10).getMood().getEmotion());
-        assertEquals(Color.BLACK, testBoard.getPixels().get(10).getMood().getColour());
+        assertEquals(Color.WHITE, testBoard.getPixels().get(10).getMood().getColour());
     }
 
     @Test
@@ -56,7 +56,7 @@ class BoardTest {
         assertEquals(2, testBoard.getPixels().get(49).getMonth());
         assertEquals(19, testBoard.getPixels().get(49).getDay());
         assertEquals(" ", testBoard.getPixels().get(10).getMood().getEmotion());
-        assertEquals(Color.BLACK, testBoard.getPixels().get(10).getMood().getColour());
+        assertEquals(Color.WHITE, testBoard.getPixels().get(10).getMood().getColour());
     }
 
     @Test
@@ -68,7 +68,7 @@ class BoardTest {
         assertEquals(8, testBoard.getPixels().get(69).getMonth());
         assertEquals(11, testBoard.getPixels().get(69).getDay());
         assertEquals(" ", testBoard.getPixels().get(10).getMood().getEmotion());
-        assertEquals(Color.BLACK, testBoard.getPixels().get(10).getMood().getColour());
+        assertEquals(Color.WHITE, testBoard.getPixels().get(10).getMood().getColour());
     }
 
     @Test

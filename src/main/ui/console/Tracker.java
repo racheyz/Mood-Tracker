@@ -1,10 +1,11 @@
-package ui;
+package ui.console;
 
 import model.Board;
 import model.Mood;
 import model.Pixel;
 import persistence.JsonReader;
 import persistence.JsonWriter;
+import ui.console.MoodListDisplay;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

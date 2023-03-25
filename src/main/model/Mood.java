@@ -15,6 +15,7 @@ public class Mood {
         this.emotion = e;
     }
 
+    // EFFECTS: writes the given mood to json
     public JSONObject toJson() {
         JSONObject json = new JSONObject();
         json.put("colour", colour.getRGB());
