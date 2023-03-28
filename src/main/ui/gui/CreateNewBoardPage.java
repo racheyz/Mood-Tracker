@@ -54,7 +54,7 @@ public class CreateNewBoardPage extends JFrame {
         button = new JButton("Create Tracker");
         setAppearance();
         panel = new JPanel();
-        panel.setBackground(Color.DARK_GRAY);
+        panel.setBackground(new Color(47,47,47));
         panel.add(Box.createRigidArea(new Dimension(0, 100)));
         panel.add(label1);
         panel.add(text1);

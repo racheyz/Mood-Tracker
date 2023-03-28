@@ -8,6 +8,7 @@ import ui.console.MoodListDisplay;
 import ui.gui.piechart.MoodSummaryPieChart;
 
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -31,7 +32,6 @@ public class MainApp extends JFrame implements ActionListener, MouseListener {
     private JButton dayButton;
     private JButton pieChartButton;
     private JLabel moodSummary;
-    private JScrollPane scrollPane;
     private JsonWriter jsonWriter;
     private JMenuItem mood;
     private JPopupMenu moodOptions;
@@ -59,7 +59,7 @@ public class MainApp extends JFrame implements ActionListener, MouseListener {
         resetFrame(frame);
         initializeDaysDisplay(board);
         initializeFunctionsPanel();
-        mainPanel.setBackground(Color.DARK_GRAY);
+        mainPanel.setBackground(new Color(47,47,47));
         frame.setContentPane(mainPanel);
         frame.setVisible(true);
     }
@@ -69,7 +69,6 @@ public class MainApp extends JFrame implements ActionListener, MouseListener {
     public void resetFrame(JFrame frame) {
         Container oldPanel = frame.getContentPane();
         frame.remove(oldPanel);
-        frame.setBackground(Color.DARK_GRAY);
     }
 
     // MODIFIES: this
@@ -84,6 +83,7 @@ public class MainApp extends JFrame implements ActionListener, MouseListener {
             dayButton.setPreferredSize(new Dimension(35,35));
             dayButton.setMargin(new Insets(1, 1, 1, 1));
             dayButton.setFont(new Font("Arial", Font.BOLD, 8));
+            dayButton.setBorder(BorderFactory.createLineBorder(new Color(47,47,47),1));
             daysMap.put(dayButton, p);
             daysDisplay.add(dayButton, gbc);
             dayButton.addMouseListener(this);
@@ -93,7 +93,7 @@ public class MainApp extends JFrame implements ActionListener, MouseListener {
                 gbc.gridy += 50;
             }
         }
-        daysDisplay.setBackground(Color.DARK_GRAY);
+        daysDisplay.setBackground(new Color(47,47,47));
         daysDisplay.setBorder(BorderFactory.createEmptyBorder(20, 20,10,20));
         mainPanel.add(daysDisplay, BorderLayout.WEST);
         mainPanel.revalidate();
@@ -116,14 +116,14 @@ public class MainApp extends JFrame implements ActionListener, MouseListener {
         functionsPanel.add(saveButton);
         functionsPanel.add(Box.createRigidArea(new Dimension(0, 30)));
         functionsPanel.setBorder(BorderFactory.createEmptyBorder(10, 5,10,50));
-        functionsPanel.setBackground(Color.DARK_GRAY);
+        functionsPanel.setBackground(new Color(47,47,47));
         mainPanel.add(functionsPanel,BorderLayout.EAST);
-        getSummaryLabels();
+        addSummaryLabels();
     }
 
     // MODIFIES: this
     // EFFECTS: creates labels to display the mood summary
-    public void getSummaryLabels() {
+    public void addSummaryLabels() {
         int totalDays = board.getSize();
         for (Mood m: moodListDisplay.getMoodList()) {
             moodSummary = new JLabel(m.getEmotion() + ": " + board.countMoodOccurences(m) + "/" + totalDays);
@@ -131,6 +131,12 @@ public class MainApp extends JFrame implements ActionListener, MouseListener {
             summaryPanel.add(moodSummary);
             summaryPanel.add(Box.createRigidArea(new Dimension(0, 10)));
         }
+        addSummaryChartFunction();
+    }
+
+    // MODIFIES: this
+    // EFFECTS: add pie chart feature for representing mood summary to functions panel
+    public void addSummaryChartFunction() {
         pieChartButton =  new JButton("Generate Pie Chart");
         pieChartButton.setBackground(Color.WHITE);
         pieChartButton.addActionListener(new ActionListener() {
@@ -144,7 +150,7 @@ public class MainApp extends JFrame implements ActionListener, MouseListener {
         });
         summaryPanel.add(pieChartButton);
         summaryPanel.setLayout(new BoxLayout(summaryPanel,BoxLayout.Y_AXIS));
-        summaryPanel.setBackground(Color.DARK_GRAY);
+        summaryPanel.setBackground(new Color(47,47,47));
         summaryPanel.setAlignmentX(Component.CENTER_ALIGNMENT);
         functionsPanel.add(summaryPanel);
     }
@@ -167,7 +173,7 @@ public class MainApp extends JFrame implements ActionListener, MouseListener {
             summaryPanel.removeAll();
             functionsPanel.revalidate();
             functionsPanel.repaint();
-            getSummaryLabels();
+            addSummaryLabels();
         } else if (evt.getSource() == saveButton) {
             jsonWriter = new JsonWriter(JSON_STORE);
             try {
@@ -201,7 +207,7 @@ public class MainApp extends JFrame implements ActionListener, MouseListener {
                     summaryPanel.removeAll();
                     functionsPanel.revalidate();
                     functionsPanel.repaint();
-                    getSummaryLabels();
+                    addSummaryLabels();
                 }
 
             });

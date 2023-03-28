@@ -9,15 +9,15 @@ import java.util.List;
 // A list of moods
 public class MoodListDisplay {
 
-    private static final Color ANGRY_RED = new Color(255,0,0);
-    private static final Color ANXIOUS_ORANGE = new Color(255,153,51);
+    private static final Color ANGRY_RED = new Color(250,   121,112);
+    private static final Color ANXIOUS_ORANGE = new Color(250,163,86);
     private static final Color SICK_YELLOW = new Color(255,255,102);
-    private static final Color HAPPY_LIGHTGREEN = new Color(109,232,114);
-    private static final Color CALM_LIGHTBLUE = new Color(147,224,243);
-    private static final Color SAD_DARKBLUE = new Color(0,102,204);
-    private static final Color TIRED_LIGHTPURPLE = new Color(153,153,255);
-    private static final Color EXCITED_PINK = new Color(255,153,204);
-    private static final Color NEUTRAL_GRAY = new Color(192,192,192);
+    private static final Color HAPPY_LIGHTGREEN = new Color(127,227,139);
+    private static final Color CALM_LIGHTBLUE = new Color(162,210,251);
+    private static final Color SAD_DARKBLUE = new Color(68,116,158);
+    private static final Color TIRED_LIGHTPURPLE = new Color(206,165,251);
+    private static final Color EXCITED_PINK = new Color(242,161,188);
+    private static final Color NEUTRAL_GRAY = new Color(198,205,213);
 
 
     private List<Mood> moodList;
