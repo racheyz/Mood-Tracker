@@ -52,7 +52,7 @@ Instructions for Grader:
   start page
 
 ##Citations:
-Code for creating a mood chart is inspired and modified from 
+Code for creating a pie chart is inspired and modified from 
 http://www.java2s.com/Tutorial/Java/0261__2D-Graphics/DrawingaPieChart.htm
 
  

@@ -107,4 +107,5 @@ public class CreateNewBoardPage extends JFrame {
             }
         });
     }
+    
 }
