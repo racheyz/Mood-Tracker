@@ -8,7 +8,6 @@ import ui.console.MoodListDisplay;
 import ui.gui.piechart.MoodSummaryPieChart;
 
 import javax.swing.*;
-import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -81,7 +80,6 @@ public class MainApp extends JFrame implements ActionListener, MouseListener {
             dayButton = new JButton("" + p.getMonth() + " / " + p.getDay() + "");
             dayButton.setBackground(p.getMood().getColour());
             dayButton.setPreferredSize(new Dimension(35,35));
-            dayButton.setMargin(new Insets(1, 1, 1, 1));
             dayButton.setFont(new Font("Arial", Font.BOLD, 8));
             dayButton.setBorder(BorderFactory.createLineBorder(new Color(47,47,47),1));
             daysMap.put(dayButton, p);
