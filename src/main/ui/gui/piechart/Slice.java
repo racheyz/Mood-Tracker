@@ -8,11 +8,14 @@ public class Slice {
     private double value;
     private Color colour;
 
+    // REQUIRES: value >= 0
+    // EFFECTS: constructs a slice with given value and colour
     public Slice(double value, Color c) {
         this.value = value;
         this.colour = c;
     }
 
+    // getters
     public double getValue() {
         return value;
     }

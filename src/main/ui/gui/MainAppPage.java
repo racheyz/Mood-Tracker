@@ -1,7 +1,9 @@
 package ui.gui;
 
 import model.Board;
+import model.EventLog;
 import model.Mood;
+import model.Event;
 import model.Pixel;
 import persistence.JsonWriter;
 import ui.console.MoodListDisplay;
@@ -9,16 +11,14 @@ import ui.gui.piechart.MoodSummaryPieChart;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+import java.awt.event.*;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MainApp extends JFrame implements ActionListener, MouseListener {
+// Represents the main page where the mood tracker is run
+public class MainAppPage extends JFrame implements ActionListener, MouseListener, WindowListener {
     private JFrame frame;
     private Board board;
     private JPanel mainPanel;
@@ -39,7 +39,9 @@ public class MainApp extends JFrame implements ActionListener, MouseListener {
     private static final String JSON_STORE = "./data/board.json";
 
 
-    public MainApp(Board board, JFrame frame) {
+    // MODIFIES: this
+    // EFFECTS: sets up all components and runs page
+    public MainAppPage(Board board, JFrame frame) {
         this.frame = frame;
         this.board = board;
         this.mainPanel = new JPanel(new BorderLayout());
@@ -56,6 +58,7 @@ public class MainApp extends JFrame implements ActionListener, MouseListener {
     // EFFECTS: sets up the frame and panels
     public void setUp() {
         resetFrame(frame);
+        frame.addWindowListener(this);
         initializeDaysDisplay(board);
         initializeFunctionsPanel();
         mainPanel.setBackground(new Color(47,47,47));
@@ -214,6 +217,16 @@ public class MainApp extends JFrame implements ActionListener, MouseListener {
         moodOptions.show(me.getComponent(),me.getX(),me.getY());
     }
 
+    // EFFECTS: prints log events to console when window is closed
+    @Override
+    public void windowClosed(WindowEvent e) {
+        EventLog el = EventLog.getInstance();
+        for (Event next: el) {
+            System.out.println(next.getDescription());
+        }
+    }
+
+
     @Override
     public void mousePressed(MouseEvent e) {}
 
@@ -226,4 +239,21 @@ public class MainApp extends JFrame implements ActionListener, MouseListener {
     @Override
     public void mouseExited(MouseEvent e) {}
 
+    @Override
+    public void windowOpened(WindowEvent e) {}
+
+    @Override
+    public void windowClosing(WindowEvent e) {}
+
+    @Override
+    public void windowIconified(WindowEvent e) {}
+
+    @Override
+    public void windowDeiconified(WindowEvent e) {}
+
+    @Override
+    public void windowActivated(WindowEvent e) {}
+
+    @Override
+    public void windowDeactivated(WindowEvent e) {}
 }

@@ -16,6 +16,7 @@ public class Pixel {
         this.mood = mood;
     }
 
+    // EFFECTS: writes the pixel to json
     public JSONObject toJson() {
         JSONObject json = new JSONObject();
         json.put("month", month);
@@ -28,6 +29,7 @@ public class Pixel {
     // EFFECTS: setter for mood
     public void setMood(Mood mood) {
         this.mood = mood;
+        EventLog.getInstance().logEvent(new Event("Recorded a mood"));
     }
 
     // getters

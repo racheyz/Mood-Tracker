@@ -10,6 +10,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.IOException;
 
+// Represents the starting page
 public class StartPage extends JFrame implements MouseListener {
     private JFrame frame;
     private JPanel panel;
@@ -20,12 +21,15 @@ public class StartPage extends JFrame implements MouseListener {
     private static final String JSON_STORE = "./data/board.json";
     private JsonReader jsonReader;
 
+    // MODIFIES: this
+    // EFFECT: sets up frame and runs page
     public StartPage() {
         this.frame = new JFrame();
         setUp();
         run();
     }
 
+    // MODIFIES: this
     // EFFECTS: sets up the frame and panels
     public void setUp() {
         initializeFrame();
@@ -97,7 +101,7 @@ public class StartPage extends JFrame implements MouseListener {
             jsonReader = new JsonReader(JSON_STORE);
             try {
                 board = jsonReader.read();
-                new MainApp(board, frame);
+                new MainAppPage(board, frame);
             } catch (IOException exp) {
                 System.out.println("Unable to read from file: " + JSON_STORE);
             }
@@ -110,6 +114,7 @@ public class StartPage extends JFrame implements MouseListener {
     @Override
     public void mouseReleased(MouseEvent e) {}
 
+    // EFFECTS: changes colour of JLabel when the mouse enters the area
     @Override
     public void mouseEntered(MouseEvent e) {
         if (e.getSource().equals(createBoard)) {

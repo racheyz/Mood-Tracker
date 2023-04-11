@@ -5,7 +5,6 @@ pixels" template, which assigns a square/pixel to each day of the year. Differen
 different moods. Additional features could include: 
 - A summary of the user's mood inputs. For example, the number of days in total
 they felt "sad" or "happy" or "average"
-- Letting the users customize mood options
 - Having the option to add a small comment for each day
 
 ## Who will use it?
@@ -55,4 +54,22 @@ Instructions for Grader:
 Code for creating a pie chart is inspired and modified from 
 http://www.java2s.com/Tutorial/Java/0261__2D-Graphics/DrawingaPieChart.htm
 
- 
+Phase 4: Task 2:
+
+Recorded a mood
+Recorded a mood
+Recorded a mood
+Added a day to board
+Recorded a mood
+Recorded a mood
+Added a day to board
+
+"Phase 4: Task 3:
+An area that could use some refactoring is my gui package, because the three "Page" classes I have 
+share a lot of similar code. For example, they all have methods that set up the frame, clears the frame, initializing 
+components, and the run method which contains action listeners. They also all have associations with the Board class.
+If time permitted, I would have considered creating a new abstract class that the other three "Page" classes could 
+extend. I would have put concrete methods in the abstract class for initializing and resetting the frame, so the other 
+classes do not need its own redundant implementation. A Board field could be defined in the abstract class as well. 
+I could also make an abstract class for initializing components, and each class could have its own implementation of it 
+according to what components it needs for that specific page.

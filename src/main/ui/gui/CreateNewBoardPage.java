@@ -7,6 +7,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+// Represents the page where you can create a new board
 public class CreateNewBoardPage extends JFrame {
     private JPanel panel;
     private JLabel label1;
@@ -19,7 +20,8 @@ public class CreateNewBoardPage extends JFrame {
     private JFrame frame;
     private Board board;
 
-
+    // MODIFIES: this
+    // EFFECT: sets up frame and runs page
     public CreateNewBoardPage(JFrame frame) {
         this.frame = frame;
         setUp();
@@ -103,7 +105,7 @@ public class CreateNewBoardPage extends JFrame {
                 int month = Integer.parseInt(text2.getText());
                 int days = Integer.parseInt(text3.getText());
                 board.createBoard(numDays,month,days);
-                new MainApp(board, frame);
+                new MainAppPage(board, frame);
             }
         });
     }

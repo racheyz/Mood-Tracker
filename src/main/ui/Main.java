@@ -5,6 +5,8 @@ import ui.gui.StartPage;
 import java.io.FileNotFoundException;
 
 public class Main {
+
+    // runs application
     public static void main(String[] args) {
         new StartPage();
 /*        try {

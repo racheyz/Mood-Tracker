@@ -158,5 +158,37 @@
             "emotion": "sick"
         },
         "day": 20
+    },
+    {
+        "month": 1,
+        "mood": {
+            "colour": -351402,
+            "emotion": "anxious"
+        },
+        "day": 21
+    },
+    {
+        "month": 1,
+        "mood": {
+            "colour": -12290914,
+            "emotion": "sad"
+        },
+        "day": 22
+    },
+    {
+        "month": 1,
+        "mood": {
+            "colour": -8395893,
+            "emotion": "happy"
+        },
+        "day": 23
+    },
+    {
+        "month": 1,
+        "mood": {
+            "colour": -1,
+            "emotion": " "
+        },
+        "day": 24
     }
 ]}

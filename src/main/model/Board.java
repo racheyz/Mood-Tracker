@@ -62,7 +62,6 @@ public class Board {
     // EFFECTS: add the given number of days to end of mood board, month and day should continue from the last day in
     //          mood board
     public void addDayToBoard(int daysToAdd) {
-
         int newStartMonth;
         int newStartDay;
         int originalBoardSize = this.getSize();
@@ -83,6 +82,7 @@ public class Board {
             newStartMonth = 1;
         }
         createBoard(daysToAdd, newStartMonth, newStartDay);
+        EventLog.getInstance().logEvent(new Event("Added a day to board"));
     }
 
 

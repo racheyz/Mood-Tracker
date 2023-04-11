@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class Tracker {
     private Scanner input;
     private String choice;
-    MoodListDisplay ml = new MoodListDisplay();
+    private MoodListDisplay ml = new MoodListDisplay();
     private static final String JSON_STORE = "./data/board.json";
     private Board board;
     private JsonWriter jsonWriter;

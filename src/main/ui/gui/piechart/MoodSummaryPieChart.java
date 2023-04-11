@@ -15,6 +15,7 @@ public class MoodSummaryPieChart extends JComponent {
     private List<Slice> slices;
     private MoodListDisplay moodListDisplay;
 
+    // EFFECTS: constructs a mood pie chart
     public MoodSummaryPieChart(Board board) {
         this.moodListDisplay = new MoodListDisplay();
         this.slices = setSlices(board);
@@ -30,7 +31,7 @@ public class MoodSummaryPieChart extends JComponent {
         return slices;
     }
 
-    //
+    // EFFECT: paints pie chart
     public void paint(Graphics g) {
         drawPie((Graphics2D) g, getBounds(), slices);
     }
