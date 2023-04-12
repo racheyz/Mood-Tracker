@@ -222,6 +222,7 @@ public class MainAppPage extends JFrame implements ActionListener, MouseListener
     public void windowClosed(WindowEvent e) {
         EventLog el = EventLog.getInstance();
         for (Event next: el) {
+            System.out.println(next.getDate());
             System.out.println(next.getDescription());
         }
     }
