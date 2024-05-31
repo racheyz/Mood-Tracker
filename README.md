@@ -2,7 +2,7 @@
 
 A mood tracking app that lets the user log their mood for every day of the year. The format will follow the "year in 
 pixels" template, which assigns a square/pixel to each day of the year. Different colours will be used to represent 
-different moods. Additional features could include: 
+different moods. Additional features include: 
 - A summary of the user's mood inputs. For example, the number of days in total
 they felt "sad" or "happy" or "average"
 
